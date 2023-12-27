@@ -32,14 +32,21 @@ public class UserService {
 //        User userList  = userRepository.findById(data.getUser_number()).orElseThrow(() ->
 //                new IllegalArgumentException("해당 회원이 존재하지 않습니다."));;
 
+
         User userList = userRepository.checkLogin(data.getUser_number(), data.getPassword());
 
-//        log.info(String.valueOf(data.getPassword() != userList.getPassword()));
+        log.info("userList: {}", userList);
 
-//                || String.valueOf(userList.getUser_number() != data.getUser_number()) == "true")
+        if(userList == null){
+            throw new NullPointerException("아이디 또는 비밀번호가 틀렸습니다.");
+        }
+
 
 
     }
+
+
+
 
     public void signupUser(User data){
 
@@ -50,7 +57,6 @@ public class UserService {
                 .password(data.getPassword())
                 .department(data.getDepartment())
                 .build());
-
     }
 
     public void checkUser(User data){

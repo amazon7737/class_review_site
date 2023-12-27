@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, String> {
 
 
+
     @Query("select m  from User m where m.user_number = :user_number and m.password = :password")
     User checkLogin(String user_number , String password);
 

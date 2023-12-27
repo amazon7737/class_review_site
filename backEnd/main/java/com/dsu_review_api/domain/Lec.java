@@ -13,6 +13,7 @@ public class Lec {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "lec_id", nullable = false)
     private Long lec_id;
 
     @Column(nullable = false, length = 45, unique = false)

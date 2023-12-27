@@ -21,12 +21,17 @@ public class LecTest {
     @Autowired
     LecRepository lecRepository;
 
+    @Test
+    void resetDataLec(){
+        lecRepository.deleteAll();
+    }
+
     // 임의의 강의 목록 추가
     @Test
     void addLec(){
-        List<String> lecListByName = new ArrayList<>(List.of("소프트웨어공학", "데이터베이스 개론", "ui ux 설계", "경찰행정학", "경영학", "영어1", "건축학"));
-        List<String> lecListByType = new ArrayList<>(List.of("전공선택", "전공선택", "전공선택", "전공필수", "전공필수", "교양필수", "전공필수"));
-        List<String> lecListByDepartment = new ArrayList<>(List.of("소프트웨어학과", "소프트웨어학과", "시각디자인학과", "경찰행정학과", "경영학과", "영어학과", "건축학과"));
+        List<String> lecListByName = new ArrayList<>(List.of("소프트웨어공학", "데이터베이스 개론", "ui ux 설계", "경찰행정학", "경영학", "영어1", "건축학", "우리몸의이해", "영미문학과소통", "고급프로그래밍", "소프트웨어개발실습2", "소프트웨어개발실습3", "컴퓨터구조", "사용자인터페이스설계"));
+        List<String> lecListByType = new ArrayList<>(List.of("전공선택", "전공선택", "전공선택", "전공필수", "전공필수", "교양필수", "전공필수", "교선균형", "교선균형", "전공필수" , "전공선택", "전공선택", "전공선택", "전공선택"));
+        List<String> lecListByDepartment = new ArrayList<>(List.of("소프트웨어학과", "소프트웨어학과", "시각디자인학과", "경찰행정학과", "경영학과", "영어학과", "건축학과", "작업치료학과", "영어학과", "소프트웨어학과" , "소프트웨어학과", "소프트웨어학과", "소프트웨어학과", "소프트웨어학과"));
 
         for(Integer i = 0; i<lecListByName.size(); i++){
             Lec lec = Lec.builder()

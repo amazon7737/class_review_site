@@ -1,21 +1,43 @@
 package com.dsu_review_api.application.dto;
 
+import com.dsu_review_api.domain.Lec;
+import com.dsu_review_api.domain.Review_post;
 import com.dsu_review_api.domain.User;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
-@Builder
 public class ReivewPostdto {
 
-    private Long post_id;
 
-    private String post_title;
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Request{
 
-    private String post_content;
+        private String post_content;
 
-    private String lec_lec_name;
+        private String post_title;
 
-    private Integer likes;
+        private User user_number;
 
-    private User user_user_number;
+        private Lec lec_name;
+
+
+        public Review_post toEntity(){
+
+            Review_post post = Review_post.builder()
+                    .post_title(post_title)
+                    .post_content(post_content)
+                    .lec_lec_name(lec_name)
+                    .user_user_number(user_number)
+                    .build();
+
+            return post;
+        }
+
+
+
+    }
 
 }

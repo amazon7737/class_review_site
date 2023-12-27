@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 public class User_lec_list {
 
     @Id
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_number")
     private User user_user_number;
 
     @Id
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lec_id")
     private Lec lec_lec_id;
 

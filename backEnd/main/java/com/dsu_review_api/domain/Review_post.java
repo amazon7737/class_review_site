@@ -15,8 +15,8 @@ public class Review_post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long post_id;
 
-    @OneToOne
-    @JoinColumn(name = "lec_id", nullable = false, unique = true)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lec_id", nullable = false, unique = false)
     private Lec lec_lec_name;
 
     @Column(nullable = false, length = 45, unique = false)
@@ -28,8 +28,10 @@ public class Review_post {
     @Column(nullable = false, length = 45, unique = false)
     private Integer likes;
 
+    @Column(nullable = false, length = 45, unique = false)
+    private Long star_lating;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_number", nullable = false, unique = false)
     private User user_user_number;
 
