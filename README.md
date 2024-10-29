@@ -9,7 +9,8 @@ SLR(Sharing Lecture Review)의. **Ver 1.0**에서는 Figma를 통한 와이어�
 
 ## **완성된 프로토타입**
 
-<div style="display: flex; justify-content: center; gap: 20px;">
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+
   <div>
     <img src="https://github.com/user-attachments/assets/25ab436f-937b-42b9-afde-d9385071a4b6" alt="프로토타입 메인 화면" width="400"/>
     <p align="center">프로토타입 메인 페이지</p>
@@ -19,7 +20,9 @@ SLR(Sharing Lecture Review)의. **Ver 1.0**에서는 Figma를 통한 와이어�
     <img src="https://github.com/user-attachments/assets/abd7c5ad-916d-40ad-861e-ca94974adfb8" alt="프로토타입 수업 상세 페이지" width="400"/>
     <p align="center">수업 상세 페이지</p>
   </div>
+
 </div>
+
 
 
 ---
@@ -36,10 +39,10 @@ SLR(Sharing Lecture Review)의. **Ver 1.0**에서는 Figma를 통한 와이어�
 ### **프로젝트 초기: 문제 발견**  
 
 1. **CRA의 성능 제약**  
-   - 방대한 대학 데이터를 효율적으로 처리하기 위해 **SSR(Server-Side Rendering)**이 필요했습니다. 그러나 CRA는 SSR을 지원하지 않아 초기 로딩 속도가 느려졌습니다.
+   - 방대한 대학 데이터를 효율적으로 처리하기 위해 SSR(Server-Side Rendering)이 필요했습니다. 그러나 CRA는 SSR을 지원하지 않아 초기 로딩 속도가 느려졌습니다.
 
 2. **SEO 최적화 필요성**  
-   - 대학 플랫폼의 특성상 **검색 유입**이 중요했으나, **CSR(Client-Side Rendering)**만으로는 **SEO 최적화**가 제한적이었습니다. 이를 개선하기 위해 SSR 도입이 필수적이었습니다.
+   - 대학 플랫폼의 특성상 **검색 유입**이 중요했으나, CSR(Client-Side Rendering)만으로는 **SEO 최적화**가 제한적이었습니다. 이를 개선하기 위해 SSR 도입이 필수적이었습니다.
 
 3. **비효율적인 컴포넌트 구조**  
    - 컴포넌트 간 의존성이 높아 **유지보수성**이 떨어졌으며, 작은 수정에도 **광범위한 코드 변경**이 필요했습니다.
@@ -68,7 +71,7 @@ SLR(Sharing Lecture Review)의. **Ver 1.0**에서는 Figma를 통한 와이어�
    - 복잡한 상태를 효율적으로 관리하기 위해 **Redux**를 도입해 전역 상태를 유지했습니다. 하지만 복잡한 설정과 코드량이 많아 경량화된 상태 관리 도구의 필요성도 느꼈습니다.
 
 2. **Axios를 활용한 API 호출 및 데이터 연동**  
-   - 백엔드와의 통신에서 **Axios**를 사용해 **CRUD 기능**을 구현했습니다. 이 과정에서 **API 호출 모듈화**와 일관된 **에러 처리**의 중요성을 깨달았습니다.
+   - 백엔드와의 통신에서 **Axios**를 사용해 **CRUD 기능**을 구현했습니다. 이 과정에서 길어지는 코드에 대한 **API 호출 모듈화**의 중요성을 깨달았습니다.
 
 3. **컴포넌트 설계의 중요성**  
    - 초기 설계에서 컴포넌트 간 의존성이 높아 유지보수가 어려웠습니다. 이를 통해 **컴포넌트의 재사용성과 독립성**을 고려한 설계가 필수적임을 배우게 되었습니다.
