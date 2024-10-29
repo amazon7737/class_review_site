@@ -9,13 +9,18 @@ SLR(Sharing Lecture Review)의. **Ver 1.0**에서는 Figma를 통한 와이어�
 
 ## **완성된 프로토타입**
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/solp721/GYUHWAN-s-Portfolio/main/public/assets/innerslide/slr/1.png" alt="프로토타입 메인 화면" width="500"/>
-  <p>프로토타입 메인 페이지</p>
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <div>
+    <img src="https://github.com/user-attachments/assets/25ab436f-937b-42b9-afde-d9385071a4b6" alt="프로토타입 메인 화면" width="400"/>
+    <p align="center">프로토타입 메인 페이지</p>
+  </div>
 
-  <img src="https://raw.githubusercontent.com/solp721/GYUHWAN-s-Portfolio/main/public/assets/innerslide/slr/2.png" alt="프로토타입 수업 상세 페이지" width="500"/>
-  <p>수업 상세 페이지</p>
+  <div>
+    <img src="https://github.com/user-attachments/assets/abd7c5ad-916d-40ad-861e-ca94974adfb8" alt="프로토타입 수업 상세 페이지" width="400"/>
+    <p align="center">수업 상세 페이지</p>
+  </div>
 </div>
+
 
 ---
 
